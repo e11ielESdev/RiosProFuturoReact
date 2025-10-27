@@ -24,7 +24,7 @@ export default function Contact() {
     setCpfError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/validate-cpf", { cpf: onlyDigits });
+      const response = await axios.post("https://riosprofuturoreact.onrender.com/validate-cpf", { cpf: onlyDigits });
       if (response.data.valid === true) {
         setCpfStatus("valid");
         setCpfError("");
